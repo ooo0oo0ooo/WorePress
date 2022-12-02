@@ -1,30 +1,20 @@
+# 使用Docker Compose在本地主机和生产中部署Wordpress
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+相关博客文章：
 
-# Deploy Wordpress on Localhost and in Production using Docker Compose
+  - [使用Docker Compose进行WordPress本地开发](https://www.datanovia.com/en/lessons/wordpress-local-development-using-docker-compose/):使用docker在本地主机上部署Wordpress
+  - [Docker WordPress生产部署](https://www.datanovia.com/en/lessons/docker-wordpress-production-deployment/):使用docker-compose在线部署WordPress的分步指南
+  - [使用Docker WordPress Cli管理WordPress网站](https://www.datanovia.com/en/lessons/using-docker-wordpress-cli-to-manage-wordpress-websites/):用于管理WordPress网站的命令行界面
+  - 
+这里提供的安装工具包包括：
 
-Related blog post:
+  - Nginx网络服务器
+  - MariaDB/MySQL用于Wordpress数据库
+  - phpMyAdmin界面连接到您的MySQL数据库
+  - WP-Cli：Wordpress命令行界面
+  - 用于自动化的Makefile指令。
 
-  - [WordPress Local Development Using Docker
-    Compose](https://www.datanovia.com/en/lessons/wordpress-local-development-using-docker-compose/):
-    Deploy Wordpress on localhost using docker
-  - [Docker WordPress Production
-    Deployment](https://www.datanovia.com/en/lessons/docker-wordpress-production-deployment/):
-    Step-by-step guide to deploy WordPress online using docker-compose
-  - [Using Docker WordPress Cli to Manage WordPress
-    Websites](https://www.datanovia.com/en/lessons/using-docker-wordpress-cli-to-manage-wordpress-websites/):
-    Commande line interface for managing a WordPress website
-
-The installation tool kit, provided here, include:
-
-  - Nginx web server
-  - MariaDB/MySQL used for Wordpress database
-  - phpMyAdmin interface to connect to your MySQL database
-  - WP-Cli: Wordpress Command Line Interface
-  - Makefile directives for automatization.
-
-You can automatically deploy a local docker wordpress site in 5 minutes
-using the following commands:
+您可以使用以下命令在5分钟内自动部署本地docker wordpress网站：
 
 ``` bash
 # Download a wordpress docker-compose example
@@ -33,21 +23,19 @@ cd wordpress-docker-compose
 # Build and start installation
 docker-compose up -d --build
 ```
+在http://localhost访问您的网站，并通过phpMyAdmin访问您的数据库http://localhost:8080。
 
-Visit your site at <http://localhost> and your database via phpMyAdmin
-at <http://localhost:8080>.
-
-Default identification for your wordpress website admin:
+您的wordpress网站管理员的默认标识：
 
   - `Username: wordpress` and
   - `Password: wordpress`
 
-Default identification for the phpMyAdmin interface:
+phpMyAdmin接口的默认标识：
 
   - `Username: root` and
   - `Password: password`
 
-**Useful set of commands to know**:
+**要知道的一组有用的命令：**:
 
 ``` bash
 # Stop and remove containers
@@ -59,9 +47,7 @@ docker-compose down
 rm -rf certs/* certs-data/* logs/nginx/* mysql/* wordpress/*
 ```
 
-## References
+## 参考文献
 
-  - [WordPress: with Nginx web server in
-    Docker](https://github.com/mjstealey/wordpress-nginx-docker)
-  - [Quickstart: Compose and
-    WordPress](https://docs.docker.com/compose/wordpress/)
+  - [WordPress：使用Docker中的Nginx Web服务器](https://github.com/mjstealey/wordpress-nginx-docker)
+  - [快速入门：编写和WordPress](https://docs.docker.com/compose/wordpress/)
