@@ -1,0 +1,15 @@
+/*
+Theme Name: DevPoint Theme
+Version: 1.0.0
+License: MIT
+*/
+
+body {
+    margin: 0px;
+    padding: 30px;
+    background-color: #efefef;
+    font-family: "Microsoft YaHei", "微软雅黑", "pingfang sc", "宋体", Arial,
+        Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #212529;
+}
