@@ -18,8 +18,8 @@
 
 ``` bash
 # Download a wordpress docker-compose example
-git clone https://github.com/kassambara/wordpress-docker-compose
-cd wordpress-docker-compose
+git clone https://github.com/ooo0oo0ooo/WorePress.git
+cd WorePress/docker-compose1
 # Build and start installation
 docker-compose up -d --build
 ```
